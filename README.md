@@ -25,12 +25,23 @@
 
 ## Quick Start (Web App & Tests)
 
-```bash
-# Install dependencies
-pip install -r requirements.txt
+    # Install dependencies
+    pip install -r requirements.txt
 
-# Launch the interactive Aletheia Studio Web Workbench at http://localhost:8000
-uvicorn app.main:app --reload
+    # Launch the interactive Aletheia Studio Web Workbench at http://localhost:8000
+    uvicorn app.main:app --reload
 
-# Run the automated Pytest suite
-PYTHONPATH=. pytest tests/
+    # Run the automated Pytest suite
+    PYTHONPATH=. pytest tests/
+
+## Roadmap (Active Development with Claude Code)
+- [x] Core deterministic regex & word-count engine (`app/caption_linter.py`)
+- [x] PT-BR Language Gate, URL slug unmasker, and Claim Report formatter (`app/claim_engine.py`)
+- [x] Interactive dark-mode Web Workbench UI & FastAPI endpoints (`app/main.py`)
+- [x] Automated Pytest suite & GitHub Actions CI pipeline (`tests/test_aletheia.py`, `.github/workflows/ci.yml`)
+- [ ] **Live Inline Editor & Highlighting:** Upgrade the web UI with live word-count badges and inline red underlines highlighting prohibited lexical terms as the user types
+- [ ] **One-Click Report Builder UI:** Add interactive Option A / Option B / Option C report generator cards in the web workbench with one-click clipboard export
+- [ ] **SQLite Audit History & Search Dashboard:** Persist past caption audits and claim verification reports in a local SQLite database with a searchable history tab in the web UI
+- [ ] **Automated Fact-Check Source Scraper (`app/source_scraper.py`):** Fetch live article titles and snippets from Brazilian fact-checkers and clinical authorities directly inside the workbench
+- [ ] **Temporal & EXIF Media Inspector:** Add image upload support to inspect metadata timestamps against post creation dates and flag recycled crisis/political media
+- [ ] **Expanded Edge-Case Test Coverage:** Grow Pytest suite to 50+ unit and integration tests covering FastAPI routes, number-to-word formatting, and distortion trap rules
