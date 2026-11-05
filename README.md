@@ -1,4 +1,5 @@
 # Aletheia (`aletheia-core`)
+![Aletheia CI](https://github.com/wandersonsc/aletheia-core/actions/workflows/ci.yml/badge.svg) ![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg) ![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)
 > *"Unconcealing what is hidden"* — Multimodal OSINT Claim Verification & Visual Caption QA Engine
 
 **Aletheia** is a modular Python (FastAPI) and TypeScript verification platform designed for Portuguese (PT-BR) and Global media analysis. It combines a cross-lingual claim verification pipeline with a deterministic NLP/RegEx linter that enforces strict editorial and accessibility rules on visual captions.
